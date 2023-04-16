@@ -1,28 +1,27 @@
-name: Update Recent Blog Posts
-
+name: Blog post workflow
 on:
   schedule:
-    - cron: '0 0 * * 0' # Run once a week at 00:00 (midnight) on Sunday
-  workflow_dispatch:
+    # Runs every day at 3pm UTC (11pm SG)
+    - cron: '0 15 * * *'
 
 jobs:
-  update_posts:
+  pull_blog_rss:
+    name: Update with latest blog posts
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1
-
-    - name: Install dependencies
-      run: gem install httparty nokogiri octokit
-
-    - name: Scrape posts and update README
-      run: ruby ./.github/scripts/update_posts.rb
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
+      - uses: actions/checkout@v2
+      - name: Get RSS Feed
+        uses: kohrongying/readme-the-rss@master
+        with:
+          feed_url: https://blog.engyak.co/index.xml
+          count: 5 # default 5
+      - name: Commit file changes
+        run: |
+            git config --global user.name 'ngschmidt'
+            git config --global user.email 'nick.schmidt3@gmail.com'
+            git add .
+            git diff --quiet --cached || git commit -m "Update README"    
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
