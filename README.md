@@ -10,9 +10,9 @@
 ## Recent Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Internet Load Balancing with pfSense](https://blog.engyak.co/2023/10/internet-lb/)
 - [Handoff to Day-N Automation with vSphere Content Libraries and Netbox](https://blog.engyak.co/2023/09/vsphere-dayn/)
 - [Circumventing Coder&#39;s block and starting a new project](https://blog.engyak.co/2023/08/writers-block/)
 - [Why wait? Eventual Consistency and Reliability](https://blog.engyak.co/2023/07/eventual-consistency/)
 - [Python Virtual Environment Setup in Jenkins](https://blog.engyak.co/2023/07/python-venv/)
-- [Mellanox `nmlx5_core` driver `4.23` issues on ESXi 8.0 Update 1](https://blog.engyak.co/2023/06/nmlx-core/)
 <!-- BLOG-POST-LIST:END -->
