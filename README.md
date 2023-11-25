@@ -10,9 +10,9 @@
 ## Recent Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Apollo 13&#39;s &quot;Failure is not an option&quot;, and how non-engineers misinterpret it](https://blog.engyak.co/2023/11/failure-analysis/)
 - [Internet Load Balancing with pfSense](https://blog.engyak.co/2023/10/internet-lb/)
 - [Handoff to Day-N Automation with vSphere Content Libraries and Netbox](https://blog.engyak.co/2023/09/vsphere-dayn/)
 - [Circumventing Coder&#39;s block and starting a new project](https://blog.engyak.co/2023/08/writers-block/)
 - [Why wait? Eventual Consistency and Reliability](https://blog.engyak.co/2023/07/eventual-consistency/)
-- [Python Virtual Environment Setup in Jenkins](https://blog.engyak.co/2023/07/python-venv/)
 <!-- BLOG-POST-LIST:END -->
